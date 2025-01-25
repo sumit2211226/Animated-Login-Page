@@ -1,158 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Login Page</title>
+    <meta charset="UTF-8"> <!-- # Define character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- # Ensure the page is responsive and fits the device's width -->
+    <title>Animated Login Page</title> <!-- # Title of the page -->
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            margin: 0; /* # Remove default margin */
+            padding: 0; /* # Remove default padding */
+            box-sizing: border-box; /* # Include padding and border in element's total width and height */
+            font-family: 'Arial', sans-serif; /* # Set default font family */
         }
 
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #0a0a2e;
+            display: flex; /* # Use flexbox for centering */
+            justify-content: center; /* # Center horizontally */
+            align-items: center; /* # Center vertically */
+            min-height: 100vh; /* # Full height of the viewport */
+            background-color: #0a0a2e; /* # Dark background color */
         }
 
         .login-container {
-            background-color: rgba(10, 10, 46, 0.8);
-            padding: 40px;
-            border-radius: 10px;
-            border: 2px solid #00d0ff;
-            box-shadow: 0 0 20px rgba(0, 208, 255, 0.3);
-            animation: glow 2s infinite alternate;
+            background-color: rgba(10, 10, 46, 0.8); /* # Semi-transparent background */
+            padding: 40px; /* # Padding inside the container */
+            border-radius: 10px; /* # Rounded corners */
+            border: 2px solid #00d0ff; /* # Cyan border */
+            box-shadow: 0 0 20px rgba(0, 208, 255, 0.3); /* # Cyan shadow around the container */
+            animation: glow 2s infinite alternate; /* # Glow animation */
         }
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 20px rgba(0, 208, 255, 0.3);
+                box-shadow: 0 0 20px rgba(0, 208, 255, 0.3); /* # Starting state of glow */
             }
             to {
-                box-shadow: 0 0 30px rgba(0, 208, 255, 0.5);
+                box-shadow: 0 0 30px rgba(0, 208, 255, 0.5); /* # Ending state of glow */
             }
         }
 
         .input-group {
-            position: relative;
-            margin-bottom: 30px;
+            position: relative; /* # Position relative to contain absolute elements */
+            margin-bottom: 30px; /* # Space below each input group */
         }
 
         .input-group input {
-            width: 100%;
-            padding: 10px 10px 10px 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 16px;
-            transition: all 0.3s ease;
+            width: 100%; /* # Full width */
+            padding: 10px 10px 10px 40px; /* # Padding inside the input field */
+            background-color: rgba(255, 255, 255, 0.1); /* # Semi-transparent background */
+            border: none; /* # Remove border */
+            border-radius: 5px; /* # Rounded corners */
+            color: #fff; /* # White text color */
+            font-size: 16px; /* # Font size */
+            transition: all 0.3s ease; /* # Smooth transition */
         }
 
         .input-group input:focus {
-            outline: none;
-            background-color: rgba(255, 255, 255, 0.2);
+            outline: none; /* # Remove default outline on focus */
+            background-color: rgba(255, 255, 255, 0.2); /* # Change background color on focus */
         }
 
         .input-group i {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #00d0ff;
+            position: absolute; /* # Absolute positioning */
+            left: 12px; /* # Position icon on the left */
+            top: 50%; /* # Center icon vertically */
+            transform: translateY(-50%); /* # Adjust for vertical centering */
+            color: #00d0ff; /* # Cyan color for icons */
         }
 
         .login-btn {
-            width: 100%;
-            padding: 12px;
-            background: transparent;
-            border: 2px solid #00d0ff;
-            color: #00d0ff;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
+            width: 100%; /* # Full width */
+            padding: 12px; /* # Padding inside the button */
+            background: transparent; /* # Transparent background */
+            border: 2px solid #00d0ff; /* # Cyan border */
+            color: #00d0ff; /* # Cyan text color */
+            border-radius: 5px; /* # Rounded corners */
+            font-size: 16px; /* # Font size */
+            cursor: pointer; /* # Pointer cursor on hover */
+            transition: all 0.3s ease; /* # Smooth transition */
+            margin-bottom: 30px; /* # Space below the button */
         }
 
         .login-btn:hover {
-            background: #00d0ff;
-            color: #0a0a2e;
+            background: #00d0ff; /* # Change background color on hover */
+            color: #0a0a2e; /* # Change text color on hover */
         }
 
         .fingerprint {
-            width: 80px;
-            height: 80px;
-            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FkgAzZABdwmixljbQqNQKqfl88ggZE.png') center no-repeat;
-            background-size: contain;
-            margin: 20px auto;
-            position: relative;
+            width: 80px; /* # Width of the fingerprint */
+            height: 80px; /* # Height of the fingerprint */
+            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FkgAzZABdwmixljbQqNQKqfl88ggZE.png') center no-repeat; /* # Background image */
+            background-size: contain; /* # Contain background image */
+            margin: 20px auto; /* # Center the fingerprint */
+            position: relative; /* # Position relative to contain the pseudo-element */
         }
 
         .fingerprint::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #00d0ff;
-            opacity: 0;
-            border-radius: 50%;
-            animation: scan 2s infinite;
+            content: ''; /* # Empty content for pseudo-element */
+            position: absolute; /* # Absolute positioning */
+            top: 0; /* # Top position */
+            left: 0; /* # Left position */
+            right: 0; /* # Right position */
+            bottom: 0; /* # Bottom position */
+            background: #00d0ff; /* # Cyan background color */
+            opacity: 0; /* # Initial opacity */
+            border-radius: 50%; /* # Rounded corners */
+            animation: scan 2s infinite; /* # Scan animation */
         }
 
         @keyframes scan {
             0% {
-                opacity: 0;
-                transform: translateY(-100%);
+                opacity: 0; /* # Initial opacity */
+                transform: translateY(-100%); /* # Start position */
             }
             50% {
-                opacity: 0.3;
+                opacity: 0.3; /* # Middle opacity */
             }
             100% {
-                opacity: 0;
-                transform: translateY(100%);
+                opacity: 0; /* # Final opacity */
+                transform: translateY(100%); /* # End position */
             }
         }
 
         .links {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
+            display: flex; /* # Display links as flexbox */
+            justify-content: space-between; /* # Space between links */
+            font-size: 14px; /* # Font size */
         }
 
         .links a {
-            color: #00d0ff;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
+            color: #00d0ff; /* # Cyan text color */
+            text-decoration: none; /* # Remove underline */
+            transition: opacity 0.3s ease; /* # Smooth transition */
         }
 
         .links a:hover {
-            opacity: 0.8;
+            opacity: 0.8; /* # Change opacity on hover */
         }
     </style>
 </head>
 <body>
     <div class="login-container">
         <div class="input-group">
-            <i>👤</i>
-            <input type="text" placeholder="Username">
+            <i>👤</i> <!-- # Username icon -->
+            <input type="text" placeholder="Username"> <!-- # Username input field -->
         </div>
         <div class="input-group">
-            <i>🔒</i>
-            <input type="password" placeholder="Password">
+            <i>🔒</i> <!-- # Password icon -->
+            <input type="password" placeholder="Password"> <!-- # Password input field -->
         </div>
-        <button class="login-btn">Log In</button>
-        <div class="fingerprint"></div>
+        <button class="login-btn">Log In</button> <!-- # Login button -->
+        <div class="fingerprint"></div> <!-- # Fingerprint animation -->
         <div class="links">
-            <a href="#">Remember me</a>
-            <a href="#">Forgot password?</a>
+            <a href="#">Remember me</a> <!-- # Remember me link -->
+            <a href="#">Forgot password?</a> <!-- # Forgot password link -->
         </div>
     </div>
 </body>
