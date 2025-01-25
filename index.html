@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0a0a2e;
+        }
+
+        .login-container {
+            background-color: rgba(10, 10, 46, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            border: 2px solid #00d0ff;
+            box-shadow: 0 0 20px rgba(0, 208, 255, 0.3);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(0, 208, 255, 0.3);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(0, 208, 255, 0.5);
+            }
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #00d0ff;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 2px solid #00d0ff;
+            color: #00d0ff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .login-btn:hover {
+            background: #00d0ff;
+            color: #0a0a2e;
+        }
+
+        .fingerprint {
+            width: 80px;
+            height: 80px;
+            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FkgAzZABdwmixljbQqNQKqfl88ggZE.png') center no-repeat;
+            background-size: contain;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .fingerprint::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #00d0ff;
+            opacity: 0;
+            border-radius: 50%;
+            animation: scan 2s infinite;
+        }
+
+        @keyframes scan {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #00d0ff;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="input-group">
+            <i>👤</i>
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <i>🔒</i>
+            <input type="password" placeholder="Password">
+        </div>
+        <button class="login-btn">Log In</button>
+        <div class="fingerprint"></div>
+        <div class="links">
+            <a href="#">Remember me</a>
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+</body>
+</html>
